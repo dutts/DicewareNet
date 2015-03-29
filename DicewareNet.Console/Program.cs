@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using DicewareNet.Dice;
 using DicewareNet.WordList;
@@ -16,7 +14,7 @@ namespace DicewareNet.Console
         private static void Main(string[] args)
         {
             // Load in the word dict
-            var wordDict = new WordListFile("..\\..\\diceware_wordlist.txt");
+            var wordDict = new WordListWeb("http://world.std.com/~reinhold/diceware.wordlist.asc"); // WordListFile("..\\..\\diceware_wordlist.txt");
 
             do
             {
