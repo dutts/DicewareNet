@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicewareNet.Console", "DicewareNet.Console\DicewareNet.Console.csproj", "{9B3544A1-8178-4708-940C-18A9661F31C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DicewareNet", "DicewareNet\DicewareNet.csproj", "{FB619DF5-7C48-4D55-A527-80482F24271C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9B3544A1-8178-4708-940C-18A9661F31C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3544A1-8178-4708-940C-18A9661F31C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3544A1-8178-4708-940C-18A9661F31C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB619DF5-7C48-4D55-A527-80482F24271C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB619DF5-7C48-4D55-A527-80482F24271C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB619DF5-7C48-4D55-A527-80482F24271C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB619DF5-7C48-4D55-A527-80482F24271C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
