@@ -21,7 +21,7 @@ namespace DicewareNet.Dice
             long finalNumber = 0;
             for (var power = 0; power < numberOfDice; power++)
             {
-                finalNumber += (long)(diceRolls[(numberOfDice - 1) - power] * Math.Pow(10.0, (double)power));
+                finalNumber += (long) (diceRolls[numberOfDice - 1 - power]*Math.Pow(10.0, power));
             }
 
             return finalNumber;

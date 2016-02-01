@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace DicewareNet.WordList
@@ -20,7 +19,7 @@ namespace DicewareNet.WordList
 
         public IEnumerable<string> Lookup(IEnumerable<long> diceRolls, string seperator = "")
         {
-            return diceRolls.Select(r => String.Concat(Find(r), seperator));
+            return diceRolls.Select(r => string.Concat(Find(r), seperator));
         }
     }
 }

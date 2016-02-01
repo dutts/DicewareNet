@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 
 namespace DicewareNet.WordList
@@ -17,13 +16,12 @@ namespace DicewareNet.WordList
                     if (lineParts.Count() != 2) continue;
 
                     long key;
-                    if (Int64.TryParse(lineParts[0], out key))
+                    if (long.TryParse(lineParts[0], out key))
                     {
                         WordDict.Add(key, lineParts[1].Trim());
                     }
                 }
             }
         }
-
     }
 }
