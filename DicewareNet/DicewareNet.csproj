@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dice\CLRRandom.cs" />
+    <Compile Include="Dice\CryptoRandom.cs" />
     <Compile Include="Dice\IRandom.cs" />
     <Compile Include="WordList\IWordList.cs" />
     <Compile Include="WordList\WordList.cs" />

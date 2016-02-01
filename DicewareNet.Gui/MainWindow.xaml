@@ -7,21 +7,25 @@
         <viewModels:MainWindowViewModel />
     </Window.DataContext>
     <DockPanel LastChildFill="True">
-        <Button Command="{Binding GenerateCommand}" Content="Generate" DockPanel.Dock="Bottom" Height="30" Margin="5" />
+        <Button Command="{Binding GenerateCommand}" Content="Generate" DockPanel.Dock="Bottom" Height="30" Margin="2" />
         <ItemsControl ItemsSource="{Binding Words}" HorizontalAlignment="Center">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="120" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate DataType="viewModels:WordImage">
-                    <Border Padding="10" Margin="2" BorderBrush="DarkOliveGreen" Background="LightGray"
+                    <Border Padding="1" Margin="2" BorderBrush="DarkOliveGreen" Background="White"
                             BorderThickness="2" Width="100">
-                        <StackPanel Orientation="Vertical">
-                            <Image Source="{Binding Image}" />
-                            <TextBlock Text="{Binding Word}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Image}" />
+                            <TextBlock Grid.Row="1" Text="{Binding Word}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

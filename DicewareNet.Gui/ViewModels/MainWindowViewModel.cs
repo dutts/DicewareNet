@@ -17,7 +17,7 @@ namespace DicewareNet.Gui.ViewModels
     {
         public const int NumberOfDice = 5;
         public const int NumberOfRolls = 7;
-        public static ClrRandom Rng = new ClrRandom();
+        public static IRandom Rng = new CryptoRandom();
         private readonly Flickr _flickr;
 
         private ICommand _generateCommand;

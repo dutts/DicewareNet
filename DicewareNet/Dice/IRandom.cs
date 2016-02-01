@@ -1,6 +1,6 @@
 ﻿namespace DicewareNet.Dice
 {
-    internal interface IRandom
+    public interface IRandom
     {
         long DiceRoll(int numberOfDice);
     }
