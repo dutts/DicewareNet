@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace DicewareNet.Dice
 {
-    public class ClrRandom : IRandom
+    public class ClrDice : IDice
     {
-        private readonly Random _rng;
+        private readonly System.Random _rng;
 
-        public ClrRandom()
+        public ClrDice()
         {
-            _rng = new Random();
+            _rng = new System.Random();
         }
 
-        public long DiceRoll(int numberOfDice)
+        public long Roll(int numberOfDice)
         {
             var diceRolls = new List<int>(numberOfDice);
             diceRolls.AddRange(Enumerable.Range(0, numberOfDice).Select(_ => _rng.Next(1, 7)));

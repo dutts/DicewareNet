@@ -7,11 +7,13 @@ namespace DicewareNet.WordList
 {
     public class WordListWeb : WordList
     {
-        public WordListWeb(string uri)
+        private const string WordListUri = "http://world.std.com/~reinhold/diceware.wordlist.asc";
+
+        public WordListWeb()
         {
             using (var wc = new WebClient())
             {
-                wc.DownloadFile(new Uri(uri), "worldlist.tmp");
+                wc.DownloadFile(new Uri(WordListUri), "worldlist.tmp");
 
                 using (var fr = new StreamReader("worldlist.tmp"))
                 {

@@ -5,12 +5,12 @@ using System.Security.Cryptography;
 
 namespace DicewareNet.Dice
 {
-    public class CryptoRandom : IRandom
+    public class CryptoDice : IDice
     {
         private readonly RNGCryptoServiceProvider _rng = new RNGCryptoServiceProvider();
         private readonly byte[] _uint32Buffer = new byte[4];
 
-        public long DiceRoll(int numberOfDice)
+        public long Roll(int numberOfDice)
         {
             var diceRolls = new List<int>(numberOfDice);
             diceRolls.AddRange(Enumerable.Range(0, numberOfDice).Select(_ => NextRandom(1, 7)));

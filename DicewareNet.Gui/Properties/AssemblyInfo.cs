@@ -7,11 +7,11 @@ using System.Windows;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("DicewareNet.Gui")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A .Net Diceware password generator")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DicewareNet.Gui")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © Richard Dutton 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

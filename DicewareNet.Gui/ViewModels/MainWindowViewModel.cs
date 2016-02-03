@@ -13,7 +13,7 @@ namespace DicewareNet.Gui.ViewModels
     {
         public const int NumberOfDice = 5;
         public const int NumberOfRolls = 7;
-        public static IRandom Rng = new CryptoRandom();
+        public static IDice Rng = new CryptoDice();
         
         private ICommand _generateCommand;
 
@@ -24,9 +24,8 @@ namespace DicewareNet.Gui.ViewModels
 
         public MainWindowViewModel()
         {
-            _wordList = new WordListWeb("http://world.std.com/~reinhold/diceware.wordlist.asc");
-                // new WordListFile("..\\..\\diceware_wordlist.txt");
-                _imageSource = new FlickrImageSource();
+            _wordList = new WordListWeb8k();
+            _imageSource = new FlickrImageSource();
         }
 
         public ObservableCollection<WordImage> Words
@@ -42,7 +41,7 @@ namespace DicewareNet.Gui.ViewModels
                 return _generateCommand ?? (_generateCommand = new DelegateCommand(async () =>
                 {
                     Words = new ObservableCollection<WordImage>();
-                    var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(_ => Rng.DiceRoll(NumberOfDice));
+                    var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(_ => Rng.Roll(NumberOfDice));
                     Words =
                         new ObservableCollection<WordImage>(
                             _wordList.Lookup(diceRolls, " ").Select(w => new WordImage(w)));

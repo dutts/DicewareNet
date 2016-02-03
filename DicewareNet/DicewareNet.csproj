@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Random.Org, Version=0.1.4759.19552, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Random.Org.0.1.4759.19552\lib\net40\Random.Org.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,14 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dice\CLRRandom.cs" />
-    <Compile Include="Dice\CryptoRandom.cs" />
-    <Compile Include="Dice\IRandom.cs" />
+    <Compile Include="Dice\ClrDice.cs" />
+    <Compile Include="Dice\CryptoDice.cs" />
+    <Compile Include="Dice\IDice.cs" />
+    <Compile Include="Dice\DiceOrg.cs" />
     <Compile Include="WordList\IWordList.cs" />
     <Compile Include="WordList\WordList.cs" />
     <Compile Include="WordList\WordListFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordList\WordListKeys.cs" />
     <Compile Include="WordList\WordListWeb.cs" />
+    <Compile Include="WordList\WordListWeb8k.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
