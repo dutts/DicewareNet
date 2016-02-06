@@ -1,7 +1,9 @@
-﻿namespace DicewareNet.Dice
+﻿using System.Threading.Tasks;
+
+namespace DicewareNet.Dice
 {
     public interface IDice
     {
-        long Roll(int numberOfDice);
+        Task<long> RollAsync(int numberOfDice);
     }
 }

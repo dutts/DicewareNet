@@ -41,10 +41,10 @@ namespace DicewareNet.Gui.ViewModels
                 return _generateCommand ?? (_generateCommand = new DelegateCommand(async () =>
                 {
                     Words = new ObservableCollection<WordImage>();
-                    var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(_ => Rng.Roll(NumberOfDice));
+                    var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(async _ => await Rng.RollAsync(NumberOfDice));
                     Words =
                         new ObservableCollection<WordImage>(
-                            _wordList.Lookup(diceRolls, " ").Select(w => new WordImage(w)));
+                            _wordList.Lookup(diceRolls.Select(dr => dr.Result), " ").Select(w => new WordImage(w)));
 
                     foreach (var wordImage in Words)
                     {

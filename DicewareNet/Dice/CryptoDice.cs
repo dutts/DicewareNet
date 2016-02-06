@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 
 namespace DicewareNet.Dice
 {
@@ -10,7 +11,7 @@ namespace DicewareNet.Dice
         private readonly RNGCryptoServiceProvider _rng = new RNGCryptoServiceProvider();
         private readonly byte[] _uint32Buffer = new byte[4];
 
-        public long Roll(int numberOfDice)
+        public Task<long> RollAsync(int numberOfDice)
         {
             var diceRolls = new List<int>(numberOfDice);
             diceRolls.AddRange(Enumerable.Range(0, numberOfDice).Select(_ => NextRandom(1, 7)));
@@ -21,7 +22,7 @@ namespace DicewareNet.Dice
                 finalNumber += (long)(diceRolls[numberOfDice - 1 - power] * Math.Pow(10.0, power));
             }
 
-            return finalNumber;
+            return Task.FromResult(finalNumber);
         }
 
         private int NextRandom(int minValue, int maxValue)

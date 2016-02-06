@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DicewareNet.Dice
 {
@@ -13,7 +14,7 @@ namespace DicewareNet.Dice
             _rng = new System.Random();
         }
 
-        public long Roll(int numberOfDice)
+        public Task<long> RollAsync(int numberOfDice)
         {
             var diceRolls = new List<int>(numberOfDice);
             diceRolls.AddRange(Enumerable.Range(0, numberOfDice).Select(_ => _rng.Next(1, 7)));
@@ -24,7 +25,7 @@ namespace DicewareNet.Dice
                 finalNumber += (long) (diceRolls[numberOfDice - 1 - power]*Math.Pow(10.0, power));
             }
 
-            return finalNumber;
+            return Task.FromResult(finalNumber);
         }
     }
 }

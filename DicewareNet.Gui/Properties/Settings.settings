@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="FlickrAPIKey" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">&lt;insert key here&gt;</Value>
+      <Value Profile="(Default)">74dd74c013cbb0728bbb43d3b1092d7a</Value>
     </Setting>
   </Settings>
 </SettingsFile>

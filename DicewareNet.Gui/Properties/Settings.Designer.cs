@@ -25,7 +25,7 @@ namespace DicewareNet.Gui.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<insert key here>")]
+        [global::System.Configuration.DefaultSettingValueAttribute("74dd74c013cbb0728bbb43d3b1092d7a")]
         public string FlickrAPIKey {
             get {
                 return ((string)(this["FlickrAPIKey"]));

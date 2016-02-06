@@ -15,7 +15,7 @@ namespace DicewareNet.Console
             var wordDict = new WordListWeb8k();
             do
             {
-                var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(_ => Rng.Roll(NumberOfDice));
+                var diceRolls = Enumerable.Range(0, NumberOfRolls).Select(_ => Rng.RollAsync(NumberOfDice).Result);
                 var words = wordDict.Lookup(diceRolls, " ");
                 System.Console.WriteLine(string.Concat(words));
             } while (System.Console.ReadLine() != "q");
