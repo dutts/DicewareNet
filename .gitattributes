@@ -14,5 +14,5 @@
 *.jpg binary
 
 *.manifest binary
-*.application binary
+*.application text
 *.deploy binary
