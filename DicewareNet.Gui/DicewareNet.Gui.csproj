@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://raw.githubusercontent.com/dutts/DicewareNet/master/DicewareNet/DicewareNet.Gui/publish/</InstallUrl>
+    <InstallUrl>http://raw.githubusercontent.com/dutts/DicewareNet/master/DicewareNet.Gui/publish/setup.exe/</InstallUrl>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
